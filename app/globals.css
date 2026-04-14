@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 🎨 TWINTURA THEME */
+@theme {
+  /* 🔥 PRIMARY */
+  --color-primary: #0B1F3A;
+  --color-primary-light: #132A4A;
+  --color-primary-dark: #081726;
+
+  /* ⚡ ACCENT */
+  --color-accent: #3B82F6;
+  --color-accent-secondary: #8B5CF6;
+
+  /* 🧱 UI */
+  --color-bg: #0B1F3A;
+  --color-card: #111827;
+  --color-border: #1F2937;
+
+  /* 📝 TEXT */
+  --color-text: #FFFFFF;
+  --color-text-muted: #A1A1AA;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 🌑 BASE */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* ⚡ BRAND GRADIENT (ГО НЕМАШЕ — ВАЖНО) */
+@utility bg-brand {
+  background: linear-gradient(
+    to right,
+    var(--color-accent),
+    var(--color-accent-secondary)
+  );
+}
+
+/* 🧩 SHORTCUT UTILITIES */
+@utility bg-primary {
+  background: var(--color-primary);
+}
+
+@utility text-muted {
+  color: var(--color-text-muted);
+}
+
+@utility bg-card {
+  background: var(--color-card);
+}
+
+@utility border-default {
+  border-color: var(--color-border);
+}
+
+@utility font-body {
+  font-family: var(--font-body), sans-serif;
+}
+
+@utility font-heading {
+  font-family: var(--font-heading), sans-serif;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
