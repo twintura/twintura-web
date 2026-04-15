@@ -36,7 +36,9 @@ export default function Home() {
                 <Image
                   src="/projects/profil_pic.png"
                   alt="Igor Ivanov"
-                  fill
+                  width={800}
+                  height={800}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/10" />
@@ -50,9 +52,11 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full overflow-hidden border border-default shadow-lg group">
                 <Image
-                  src="/projects/profil_pic.png"
+                  src="/projects/ivance.jpeg"
                   alt="Ivan Ivanov"
-                  fill
+                  width={800}
+                  height={800}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/10" />

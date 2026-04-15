@@ -15,7 +15,7 @@ export default function Navbar() {
 
           {/* 🔥 LOGO */}
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.svg" alt="logo" width={36} height={36} />
+            <Image src="/logo.svg" alt="logo" width={36} height={36} style={{ width: "36px", height: "36px" }}/>
             <span className="font-heading tracking-tight text-lg">
               TWINTURA
             </span>
