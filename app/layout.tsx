@@ -20,8 +20,27 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Twintura",
-  description: "Software company building modern apps",
+  description: "Modern software solutions",
+  openGraph: {
+    title: "Twintura",
+    description: "Modern software solutions",
+    url: "https://twintura.com",
+    siteName: "Twintura",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  icons: {
+    icon: '/logo_simple.svg',
+  },
+
 };
+
 
 export default function RootLayout({
   children,

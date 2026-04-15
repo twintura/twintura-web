@@ -42,9 +42,9 @@ export default function Navbar() {
 
           {/* 🚀 CTA */}
           <div className="hidden md:block">
-            <button className="bg-brand px-5 py-2.5 rounded-xl text-sm font-medium shadow-lg hover:opacity-90 transition">
-              Start Project
-            </button>
+            <Button href="/contact">
+            Start a Project
+          </Button>
           </div>
 
           {/* 🍔 HAMBURGER */}
@@ -53,19 +53,16 @@ export default function Navbar() {
             className="md:hidden flex flex-col gap-1.5"
           >
             <span
-              className={`w-6 h-0.5 bg-white transition-all ${
-                open ? "rotate-45 translate-y-2" : ""
-              }`}
+              className={`w-6 h-0.5 bg-white transition-all ${open ? "rotate-45 translate-y-2" : ""
+                }`}
             />
             <span
-              className={`w-6 h-0.5 bg-white transition-all ${
-                open ? "opacity-0" : ""
-              }`}
+              className={`w-6 h-0.5 bg-white transition-all ${open ? "opacity-0" : ""
+                }`}
             />
             <span
-              className={`w-6 h-0.5 bg-white transition-all ${
-                open ? "-rotate-45 -translate-y-2" : ""
-              }`}
+              className={`w-6 h-0.5 bg-white transition-all ${open ? "-rotate-45 -translate-y-2" : ""
+                }`}
             />
           </button>
         </div>
@@ -73,17 +70,15 @@ export default function Navbar() {
 
       {/* 🌑 OVERLAY */}
       <div
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity z-40 ${
-          open ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity z-40 ${open ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
         onClick={() => setOpen(false)}
       />
 
       {/* 📱 MOBILE MENU */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-card border-l border-default z-50 transform transition-transform duration-300 ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full w-72 bg-card border-l border-default z-50 transform transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="p-6 flex flex-col gap-6">
 
@@ -103,8 +98,8 @@ export default function Navbar() {
             Contact
           </Link>
 
-          <Button>
-            Start Project
+          <Button href="/contact">
+            Start a Project
           </Button>
         </div>
       </div>
